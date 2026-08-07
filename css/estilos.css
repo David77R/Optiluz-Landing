@@ -105,3 +105,52 @@ header nav a:hover {
         font-size: 1.25rem;
     }
 }
+
+#servicios {
+    background-color: var(--color-primario-suave);
+    padding: var(--espacio-xl) var(--espacio-md);
+    text-align: center;
+}
+
+#servicios h2 {
+    color: var(--color-primario);
+    margin-bottom: var(--espacio-lg);
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacio-lg);
+}
+
+.servicio-card {
+    background-color: var(--color-fondo);
+    border-radius: 0.5rem;
+    padding: var(--espacio-lg);
+    text-align: left;
+    box-shadow: 0 8px 24px rgba(15, 118, 110, 0.12);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.servicio-card:hover,
+.servicio-card:focus-within {
+    box-shadow: 0 3px 8px rgba(15, 118, 110, 0.35);
+    transform: translateY(-4px);
+}
+
+.servicio-card h3 {
+    color: var(--color-primario);
+    margin-bottom: var(--espacio-sm);
+}
+
+@media (min-width: 768px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .servicios-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

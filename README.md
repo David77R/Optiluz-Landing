@@ -7,3 +7,7 @@ Los testimonios de la sección correspondiente son de ejemplo, ya que el negocio
 # Seccion de colores para el hero
 
 Aunque la paleta de colores me arroja un color bonito, prefiero utilizar uno mas legible y en contraste para mayor visualizacion al ojo del usuario final
+
+# Apoyo con la IA en el CSS
+
+Situando los colores primarios, me asisti para ubicar cada una de las variables en sus respectivos lugares, sin embargo el asistente IA se equivoco en principio con el gradiente y los colores herederos del color primario en la etiqueta de h1
