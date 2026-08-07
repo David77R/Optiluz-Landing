@@ -1,0 +1,107 @@
+:root {
+    --color-primario: #0F766E;
+    --color-primario-claro: #0D968A;
+    --color-primario-suave: #CCFBF1;
+    --color-acento: #BE185D;
+    --color-acento-claro: #E178B5;
+    --color-acento-suave: #FBCDE5;
+
+    --color-texto: #1A1A1A;
+    --color-texto-suave: #555555;
+    --color-fondo: #FFFFFF;
+    --espacio-sm: 0.5rem;
+    --espacio-md: 1rem;
+    --espacio-lg: 2rem;
+    --espacio-xl: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.5;
+}
+
+h1 {
+    color: var(--color-primario);
+}
+
+
+header {
+    background-color: var(--color-primario);
+    padding: var(--espacio-md);
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-sm);
+}
+
+header nav a {
+    color: var(--color-fondo);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header nav a:hover {
+    color: var(--color-acento-claro);
+}
+
+@media (min-width: 768px) {
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+#hero {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+    color: var(--color-fondo);
+    text-align: center;
+    padding: var(--espacio-xl) var(--espacio-md);
+}
+
+#hero h1 {
+    font-size: 1.75rem;
+    margin-bottom: var(--espacio-md);
+    color: var(--color-fondo);
+}
+
+#hero p {
+    font-size: 1.1rem;
+    margin-bottom: var(--espacio-lg);
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 600;
+    padding: var(--espacio-sm) var(--espacio-lg);
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-cta:hover {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+}
+
+@media (min-width: 768px) {
+    #hero h1 {
+        font-size: 3rem;
+    }
+
+    #hero p {
+        font-size: 1.25rem;
+    }
+}
