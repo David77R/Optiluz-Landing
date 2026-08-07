@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optiluz</title>
+    <meta name="description" content="Óptica Optiluz en San Cristóbal: evaluación optométrica, monturas, cristales y lentes de contacto">
+<meta property="og:title" content="Óptica Optiluz — Análisis y Prevención Visual">
+<meta property="og:description" content="Consulta incluida al comprar su montura y cristales. Atención personalizada en San Cristóbal, Táchira.">
+<meta property="og:image" content="img/optiluz_logo.png">
+<meta property="og:type" content="website">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#hero">Óptica Optiluz</a>
+   <header>
+    <nav>
+        <a href="#hero" class="logo">Óptica Optiluz</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">☰</button>
+        <div id="nav-links" class="nav-links">
             <a href="#servicios">Servicios</a>
-        </nav>
-    </header>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+</header>
     <main>
         <section id="hero">
             <h1>Su fórmula y sus lentes, en un sólo click</h1>
@@ -73,23 +83,26 @@
         <div class="form-group">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" required>
+            <span class="error-message"></span>
         </div>
 
         <div class="form-group">
             <label for="telefono">Teléfono</label>
             <input type="tel" id="telefono" name="telefono" required>
+            <span class="error-message"></span>
         </div>
 
         <div class="form-group">
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" required></textarea>
+            <span class="error-message"></span>
         </div>
         <button type="submit">Enviar</button>
     </form>
 </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p><strong>Dirección:</strong> Carrera 4 entre calles 12 y 13, diagonal al antiguo SENIAT, San Cristóbal</p>
         <p><strong>WhatsApp:</strong> 0414-7106782 · <strong>Horario:</strong> 9:00 a.m. – 12:00 m. y 2:00 p.m. – 6:00 p.m.</p>
     </footer>
