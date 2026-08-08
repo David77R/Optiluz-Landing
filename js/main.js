@@ -143,3 +143,18 @@ document.addEventListener('keydown', (e) => {
         });
     }
 });
+
+let ultimoScroll = 0;
+const headerEl = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    const scrollActual = window.scrollY;
+
+    if (scrollActual > ultimoScroll && scrollActual > 100) {
+        headerEl.classList.add('header-oculto');
+    } else {
+        headerEl.classList.remove('header-oculto');
+    }
+
+    ultimoScroll = scrollActual;
+});
