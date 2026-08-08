@@ -305,7 +305,7 @@ header nav {
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 .hero-contenido h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: var(--espacio-md);
 }
 
@@ -358,7 +358,7 @@ header nav {
 
 @media (min-width: 768px) {
     .hero-contenido h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero-contenido p {
@@ -472,6 +472,16 @@ header nav {
     text-align: center;
     margin-bottom: var(--espacio-lg);
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+#servicios h2::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 4px;
+    margin: var(--espacio-sm) auto 0;
+    background: linear-gradient(90deg, var(--color-fondo), var(--color-acento-claro));
+    border-radius: 999px;
 }
 
 .servicios-grid {
@@ -693,11 +703,20 @@ header nav {
         url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%230f766e' fill-opacity='0.34'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-
 #contacto h2 {
     color: var(--color-primario);
     text-align: center;
     margin-bottom: var(--espacio-lg);
+    font-size: 2.25rem;
+    text-shadow: 0 4px 14px rgba(15, 118, 110, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #contacto h2 {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
 
 .contacto-info {
@@ -823,4 +842,23 @@ button[type="submit"]:hover {
 
 .creditos a {
     color: var(--color-fondo);
+}
+
+.titulo-animado {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.titulo-animado.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .titulo-animado {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }

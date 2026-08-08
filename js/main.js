@@ -158,3 +158,21 @@ window.addEventListener('scroll', () => {
 
     ultimoScroll = scrollActual;
 });
+
+const titulosAnimados = document.querySelectorAll('.titulo-animado');
+const prefiereMenosMovimientoTitulos = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (prefiereMenosMovimientoTitulos) {
+    titulosAnimados.forEach((titulo) => titulo.classList.add('visible'));
+} else {
+    const observadorTitulos = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+                observadorTitulos.unobserve(entrada.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    titulosAnimados.forEach((titulo) => observadorTitulos.observe(titulo));
+}
