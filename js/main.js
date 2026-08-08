@@ -68,3 +68,78 @@ form.addEventListener('submit', (e) => {
         confirmacion.textContent = '¡Gracias! Le contactaremos pronto.';
     }, 900);
 });
+
+const heroImgs = document.querySelectorAll('.hero-img');
+const puntos = document.querySelectorAll('.punto');
+const heroGaleria = document.querySelector('#hero');
+const prefiereMenosMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let indiceHero = 0;
+let intervaloHero;
+
+function mostrarSlide(indice) {
+    heroImgs[indiceHero].classList.remove('activa');
+    puntos[indiceHero].classList.remove('activo');
+    heroImgs[indice].classList.add('activa');
+    puntos[indice].classList.add('activo');
+    indiceHero = indice;
+}
+
+function siguienteSlide() {
+    mostrarSlide((indiceHero + 1) % heroImgs.length);
+}
+
+function iniciarAutoplay() {
+    if (!prefiereMenosMovimiento) {
+        intervaloHero = setInterval(siguienteSlide, 4000);
+    }
+}
+
+puntos.forEach((punto) => {
+    punto.addEventListener('click', () => {
+        clearInterval(intervaloHero);
+        mostrarSlide(Number(punto.dataset.index));
+        iniciarAutoplay();
+    });
+});
+const heroSection = document.querySelector('#hero');
+heroSection.addEventListener('mouseenter', () => clearInterval(intervaloHero));
+heroSection.addEventListener('mouseleave', iniciarAutoplay);
+
+iniciarAutoplay();
+
+const navItems = document.querySelectorAll('.nav-item');
+
+navItems.forEach((item) => {
+    const boton = item.querySelector('.nav-link-btn');
+
+    boton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const yaAbierto = item.classList.contains('abierto');
+
+        navItems.forEach((otro) => {
+            otro.classList.remove('abierto');
+            otro.querySelector('.nav-link-btn').setAttribute('aria-expanded', 'false');
+        });
+
+        if (!yaAbierto) {
+            item.classList.add('abierto');
+            boton.setAttribute('aria-expanded', 'true');
+        }
+    });
+});
+
+document.addEventListener('click', () => {
+    navItems.forEach((item) => {
+        item.classList.remove('abierto');
+        item.querySelector('.nav-link-btn').setAttribute('aria-expanded', 'false');
+    });
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        navItems.forEach((item) => {
+            item.classList.remove('abierto');
+            item.querySelector('.nav-link-btn').setAttribute('aria-expanded', 'false');
+        });
+    }
+});

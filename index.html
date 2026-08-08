@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optiluz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <meta name="description" content="Óptica Optiluz en San Cristóbal: evaluación optométrica, monturas, cristales y lentes de contacto">
 <meta property="og:title" content="Óptica Optiluz — Análisis y Prevención Visual">
 <meta property="og:description" content="Consulta incluida al comprar su montura y cristales. Atención personalizada en San Cristóbal, Táchira.">
@@ -16,34 +19,75 @@
    <header>
     <nav>
         <a href="#hero" class="logo">
-    <img src="img/logo_header_blanco_completo.png" alt="Óptica Optiluz" width="693" height="641">
+            <img src="img/logo_header_blanco_completo.png" alt="" width="693" height="641">
+        <span class="logo-texto">Óptica Optiluz</span>
         </a>
-       
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">☰</button>
         <div id="nav-links" class="nav-links">
-            <a href="#servicios">Servicios</a>
-            <a href="#testimonios">Testimonios</a>
-            <a href="#contacto">Contacto</a>
+            <div class="nav-item">
+                <button class="nav-link-btn" aria-expanded="false" aria-controls="submenu-servicios">Servicios</button>
+                <div class="submenu" id="submenu-servicios">
+                    <a href="#servicio-monturas">Reservar montura</a>
+                    <a href="#servicio-evaluacion">Consulta</a>
+                    <a href="#servicio-lentes-contacto">Valoración</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link-btn" aria-expanded="false" aria-controls="submenu-testimonios">Testimonios</button>
+                <div class="submenu" id="submenu-testimonios">
+                    <a href="#testimonios">¿Quiénes somos?</a>
+                    <a href="#testimonios">Pacientes satisfechos</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link-btn" aria-expanded="false" aria-controls="submenu-contacto">Contacto</button>
+                <div class="submenu" id="submenu-contacto">
+                    <a href="https://instagram.com/optiluz.sc" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://wa.me/584147106782" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+            </div>
+
+            <a href="#contacto" class="btn-nav-destacado">Contáctenos ahora</a>
         </div>
     </nav>
 </header>
 
     <main>
-        <section id="hero">
-            <h1>Su fórmula y sus lentes, en un sólo click</h1>
-            <p>Atención directa y personalizada con su optometrista - Evaluación incluída al comprar la montura</p>
-            <a href="#contacto" class="btn-cta">Agendar una consulta</a>
+      <section id="hero">
+    <div class="hero-fondo">
+        <img src="https://images.unsplash.com/photo-1556306510-31ca015374b0?auto=format&fit=crop&w=1200&h=900&q=60" alt="Lentes de montura negra" width="1200" height="900" class="hero-img activa" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1515485315907-72cf613bb1de?auto=format&fit=crop&w=1200&h=900&q=60" alt="Lentes transparentes con montura negra" width="1200" height="900" class="hero-img" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1713036629576-96763bbef4c3?auto=format&fit=crop&w=1200&h=900&q=60" alt="Lentes de sol estilo producto" width="1200" height="900" class="hero-img" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1722303165074-acba5cd2f3cd?auto=format&fit=crop&w=1200&h=900&q=60" alt="Tres pares de lentes redondos sobre fondo de color" width="1200" height="900" class="hero-img" loading="lazy">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-contenido">
+        <h1>Su fórmula y sus lentes, en un sólo click</h1>
+        <p>Atención directa y personalizada con su optometrista - Evaluación incluída al comprar la montura</p>
+        <a href="#contacto" class="btn-cta">Agendar una consulta</a>
+    </div>
+
+    <div class="hero-galeria-puntos">
+        <button class="punto activo" data-index="0" aria-label="Ver imagen 1"></button>
+        <button class="punto" data-index="1" aria-label="Ver imagen 2"></button>
+        <button class="punto" data-index="2" aria-label="Ver imagen 3"></button>
+        <button class="punto" data-index="3" aria-label="Ver imagen 4"></button>
+    </div>
+</section>
         </section>
 
         <section id="servicios">
                             <h2>Todo lo que necesita para su visión en un solo lugar</h2>
-                <div class="servicios-grid">
-            <article class="servicio-card">
+      <div class="servicios-grid">
+            <article class="servicio-card" id="servicio-evaluacion">
                 <h3>Fórmula</h3>
                 <p>Fórmula para lentes de todo tipo</p>
             </article>
 
-           <article class="servicio-card">
+           <article class="servicio-card" id="servicio-monturas">
                 <h3>Monturas</h3>
                 <p>Amplio catálogo para todos los estilos y presupuestos</p>
             </article>
@@ -53,7 +97,7 @@
                 <p>Adaptados a su fórmula y estilo de visión</p>
             </article>
 
-            <article class="servicio-card">
+            <article class="servicio-card" id="servicio-lentes-contacto">
                 <h3>Lentes de contacto</h3>
                 <p>Formulados, cosméticos y multifocales</p>
             </article>
