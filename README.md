@@ -6,7 +6,7 @@ Los testimonios de la sección correspondiente son de ejemplo, ya que el negocio
 
 ## Imágenes
 
-Las fotografías de la sección de Servicios son de stock usadas como ilustrativas del tipo de producto por los momentos
+Las fotografías de la sección de Servicios son de stock usadas como ilustrativas del tipo de producto por los momentos. El fondo de la sección de servicios junto con las imágenes son temporales de stock genérico, las mismas las planeo reemplazar con fotos reales del consultorio junto con del inventario cuando las tenga disponibles
 
 # Seccion de colores para el hero
 
@@ -21,6 +21,11 @@ Situando los colores primarios, me asisti para ubicar cada una de las variables 
 Sitio en vivo: https://optiluz-landing.vercel.app/
 
 ## Lighthouse (perfil móvil)
+
+- Performance: 97
+- Accessibility: 100
+
+# Light house perfil móvil modo incógnito
 
 - Performance: 97
 - Accessibility: 100
