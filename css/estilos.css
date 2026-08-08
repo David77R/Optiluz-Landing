@@ -327,7 +327,12 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: var(--color-primario-claro);
 }
-
+.form-confirmacion {
+    margin-top: var(--espacio-md);
+    color: var(--color-primario);
+    font-weight: 600;
+    text-align: center;
+}
 .site-footer {
     background-color: var(--color-texto);
     color: var(--color-fondo);
